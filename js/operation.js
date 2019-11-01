@@ -1,8 +1,8 @@
 var tabLinks = new Array();
 var contentDivs = new Array();
-function init() {
 
-    // Grab the tab links and content divs from the page
+
+  var showTab = function () {
     var tabListItems = document.getElementById('tabs').childNodes;
     for ( var i = 0; i < tabListItems.length; i++ ) {
       if ( tabListItems[i].nodeName == "LI" ) {
@@ -31,8 +31,6 @@ function init() {
       if ( i != 0 ) contentDivs[id].className = 'tabContent hide';
       i++;
     }
-  }
-  function showTab() {
     var selectedId = getHash( this.getAttribute('href') );
 
     // Highlight the selected tab, and dim all others.
@@ -60,17 +58,23 @@ function init() {
     return url.substring( hashPos + 1 );
   }
 
+  var i=1;
   function addBoard(){
 
     var para = document.createElement("li");
     var link = document.createElement("a");
-    link.href="#usage";
-    link.onclick= 'showTab()';
+    link.href="#usage"+i;
+    link.addEventListener('click', showTab);
     var node = document.createTextNode("Board");
     link.appendChild(node);
     para.appendChild(link);
     var element = document.getElementById("tabs");
     element.appendChild(para);
+    
+    i=i+1;
+  
 
 
-  }
+  } 
+ 
+  
