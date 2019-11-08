@@ -13,8 +13,7 @@ var contentDivs = new Array();
       }
     }
 
-    // Assign onclick events to the tab links, and
-    // highlight the first tab
+  
     var i = 0;
 
     for ( var id in tabLinks ) {
@@ -24,7 +23,7 @@ var contentDivs = new Array();
       i++;
     }
 
-    // Hide all content divs except the first
+    
     var i = 0;
 
     for ( var id in contentDivs ) {
@@ -33,8 +32,7 @@ var contentDivs = new Array();
     }
     var selectedId = getHash( this.getAttribute('href') );
 
-    // Highlight the selected tab, and dim all others.
-    // Also show the selected content div, and hide all others.
+    
     for ( var id in contentDivs ) {
       if ( id == selectedId ) {
         tabLinks[id].className = 'selected';
@@ -45,7 +43,7 @@ var contentDivs = new Array();
       }
     }
 
-    // Stop the browser following the link
+    
     return false;
   }
   function getFirstChildWithTagName( element, tagName ) {

@@ -130,7 +130,7 @@ div.tabContent.hide {
 
     position: absolute;
     bottom: 0;
-    height: 30px;
+    height: 40px;
     background: #f2f4f5;
     width: 100%;
     border-bottom-left-radius:2px;
@@ -152,7 +152,7 @@ div.tabContent.hide {
     box-shadow: none;
 }
   
-  .sticker:hover {
+.sticker:hover {
     z-index: 1;
   }
   
